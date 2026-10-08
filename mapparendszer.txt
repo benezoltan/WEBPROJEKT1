@@ -1,4 +1,4 @@
-my-express-project/
+my-express-project/ 
 ├── src/
 │   ├── config/          # Konfigurációs fájlok (adatbázis kapcsolat, környezeti változók)
 │   │   └── db.js
