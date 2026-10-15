@@ -23,7 +23,13 @@ const UserModel = {
     // Felhasználó lekérése email alapján
     async getByEmail(email) {
     const [rows] = await pool.query('SELECT * FROM users WHERE email = ?', [email]);
-    return rows[0];
+    return rows[0];    
+  },
+
+    // lastlogin frissítése
+    async updateLastLogin(id) {
+    const [result] = await pool.query('UPDATE users SET lastlogin = NOW() WHERE id = ?', [id]);
+    return result.affectedRows > 0;
   }
 
 }

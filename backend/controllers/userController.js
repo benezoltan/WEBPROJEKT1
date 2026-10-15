@@ -60,7 +60,8 @@ const UserController = {
                 res.status(401).json({ error: 'Hibás jelszó' });
                 return;
             }
-            res.json({ message: 'Sikeres bejelentkezés', user });
+            await userModel.updateLastLogin(user.id); // lastlogin frissítése
+            res.json({ message: 'Sikeres bejelentkezés', user }); //200
         } catch (error) {
             console.error('Error during login:', error);
             res.status(500).json({ error: 'Internal Server Error' });
