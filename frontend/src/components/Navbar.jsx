@@ -9,6 +9,7 @@ export default function Navbar() {
             <NavLink to="/register">Regisztráció</NavLink>
             <NavLink to="/user">Felhasználó</NavLink>
             <NavLink to="/multi-form">MultiForm</NavLink>
+            <NavLink to="/admin">Admin</NavLink>
         </nav>
     )
 }

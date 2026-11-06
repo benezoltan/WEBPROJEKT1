@@ -7,6 +7,7 @@ import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import MultiForm from './components/MultiForm'
+import AdminPage from './components/AdminPage'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/register" element={<RegForm />} />
           <Route path="/user" element={<UserForm />} />
           <Route path="/multi-form" element={<MultiForm />} />
+          <Route path="/admin" element={<AdminPage />} />
         </Routes>
         <Footer />
       </Router>
