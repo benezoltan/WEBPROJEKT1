@@ -90,6 +90,7 @@ const UserController = {
     },
 
     async refreshToken(req, res) {
+        console.log('Refresh token request received',req.cookies);
         const refreshToken = req.cookies.refreshToken;
         if (!refreshToken) {
             return res.status(401).json({ error: 'Nincs frissítő token' }); //401 Unauthorized

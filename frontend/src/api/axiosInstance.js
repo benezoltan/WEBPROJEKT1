@@ -25,7 +25,7 @@ api.interceptors.response.use(
             try {
                 // Meghívjuk a refresh tokent a szerveren
                 // A böngésző a withCredentials miatt automatikusan csatolja a refresh token sütit is!
-                await axios.post('http://localhost:3000/api/auth/refresh-token', {}, {
+                await api.post('/users/refresh-token', {}, {
                     withCredentials: true
                 });
 
