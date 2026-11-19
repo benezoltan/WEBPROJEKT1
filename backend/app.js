@@ -11,6 +11,7 @@ import logger from 'morgan';
 import { fileURLToPath } from 'url';
 import  'dotenv/config';
 import cors from 'cors';
+import multer from 'multer';
 
 //var indexRouter = require('./routes/index');
 //var usersRouter = require('./routes/users');
